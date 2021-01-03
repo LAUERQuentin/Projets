@@ -1,0 +1,109 @@
+html,body{
+    width: 100%; 
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    
+}
+li{
+    list-style: none;
+}
+ul#PokemonList li{
+    cursor: pointer;
+}
+ul#PokemonList li:clicked{
+    background-color: grey;
+}
+select#sort-by{
+    height: 100;
+    cursor: pointer;
+    font-weight: bolder;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.form-control {
+    display: inline-block;
+    width: auto;
+}
+.main{
+    height: 100%;
+}
+#logo{
+    height: 90px;
+}
+#team-name{
+    display: flex;
+    align-items: flex-end;
+}
+.content{
+    height: 86vh;
+}
+.header{
+    height: 100px;
+    border-bottom: 1px solid black;
+}
+.select-menu{
+    height: 100%;
+    border-right: 1px solid black;
+}
+div.overflow-auto.pokemon-list{
+    height: 77%;
+}
+#PokemonList{
+    padding: 0;
+}
+.pokedex-entry{
+    height: 100%;
+}
+input[type="search"] {
+    margin-top: 15px;
+    width: inherit;
+}
+
+/* Fiche Pokemon */
+
+h2 {
+    font-size: 1.75rem;
+}
+
+.progress {
+    height: 1.5rem;
+}
+
+.fiche .row {
+    padding-top: 2%;
+    padding-bottom: 4%;
+}
+
+#imgPok{
+    height:250px;
+}
+
+.addFavorite svg{
+    fill: black;
+}
+
+svg {
+    fill: red;
+}
+
+.list-group-item {
+    font-weight: bold;
+}
+
+.list-group-item span{
+    font-weight: normal;
+}
+
+#moveList {
+    margin-left: 30px;
+}
+#moveList li {
+    cursor: pointer;
+    list-style: disc;
+    padding-bottom: 7px;
+}
+#abilities{
+    cursor: pointer;
+    
+}

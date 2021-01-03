@@ -1,0 +1,11 @@
+#photo img {
+  height: 80%;
+  width: 80%;
+}
+#photo input {
+  position: absolute;
+  height: 80%;
+  width: 70%;
+  user-select: none;
+  mix-blend-mode: hue;
+}

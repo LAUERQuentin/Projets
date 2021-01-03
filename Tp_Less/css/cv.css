@@ -1,0 +1,283 @@
+main#mainCv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main#mainCv div.main {
+  background-color: #eeeeee;
+  display: flex;
+  flex-direction: row;
+  box-shadow: 2px 2px 2px 1px rgba(59, 59, 59, 0.733);
+  padding: 20px;
+  width: 900px;
+}
+main#mainCv section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+input#toggle {
+  opacity: 0;
+}
+input#toggle + label {
+  display: block;
+  float: right;
+  margin-top: 60px;
+  margin-right: 40px;
+  position: relative;
+  box-shadow: inset 0 0 0px 1px #d5d5d5;
+  text-indent: -5000px;
+  height: 30px;
+  width: 50px;
+  border-radius: 15px;
+  background-color: white;
+}
+input#toggle + label:before {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 30px;
+  width: 2%;
+  top: 0;
+  left: 0;
+  border-radius: 15px;
+  background: rgba(19, 191, 17, 0);
+  -moz-transition: 0.25s ease-in-out;
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+input#toggle + label:after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 30px;
+  width: 30px;
+  top: 0px;
+  left: 0px;
+  border-radius: 15px;
+  background: white;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.2);
+  -moz-transition: 0.25s ease-in-out;
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+input#toggle:checked + label:before {
+  width: 50px;
+  background: rgba(53, 177, 22, 0.8);
+}
+input#toggle:checked + label:after {
+  left: 20px;
+  box-shadow: inset 0 0 0 1px rgba(69, 69, 69, 0.8), 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+div#profile {
+  display: flex;
+  flex-direction: row;
+  margin-left: 10px;
+}
+div#pres {
+  background-color: #eeeeee;
+  flex-direction: column;
+  display: flex;
+  flex-direction: row;
+  box-shadow: 2px 2px 2px 1px rgba(59, 59, 59, 0.733);
+  padding: 20px;
+  width: 230px;
+}
+div#pres span {
+  font-weight: bold;
+  margin: 5px;
+}
+main#mainAll {
+  background-color: lightblue;
+}
+#toggle:checked ~ #mainAll {
+  background-color: #424855;
+}
+#toggle:checked ~ #mainAll #presentation #profile #pres {
+  background-color: #7c7c7c;
+}
+#toggle:checked ~ #mainAll #mainCv #competenceAll #competence .competenceListe1 .logoLab {
+  background: #424855;
+}
+#toggle:checked ~ #mainAll #mainCv #competenceAll #competence .competenceListe1 .logoLab:hover {
+  background-color: #221c53;
+}
+#toggle:checked ~ #mainAll #mainCv #competenceAll #competence .competenceListe2 .logoLab {
+  background: #424855;
+}
+#toggle:checked ~ #mainAll #mainCv #competenceAll #competence .competenceListe2 .logoLab:hover {
+  background-color: #221c53;
+}
+#toggle:checked ~ #mainAll #mainCv #hobbies .hobbielist .hobbielab {
+  background-color: #424855;
+}
+#toggle:checked ~ #mainAll #mainCv #hobbies .hobbielist .hobbielab:hover {
+  background-color: #06440e;
+}
+#toggle:checked ~ #mainAll #mainCv .main {
+  background-color: #7c7c7c;
+}
+div#competence {
+  transition: 0.5s;
+  user-select: none;
+}
+div#competence .informatique:checked ~ .competenceListe2 {
+  width: 322px;
+}
+div#competence .informatique:checked ~ .competenceListe2 .ps {
+  display: none;
+}
+div#competence .informatique:checked ~ .competenceListe2 .anglais {
+  display: none;
+}
+div#competence .informatique:checked ~ .competenceListe2 .francais {
+  display: none;
+}
+div#competence .langue:checked ~ .competenceListe1 .html {
+  display: none;
+}
+div#competence .langue:checked ~ .competenceListe1 .css {
+  display: none;
+}
+div#competence .langue:checked ~ .competenceListe1 .js {
+  display: none;
+}
+div#competence .langue:checked ~ .competenceListe1 .php {
+  display: none;
+}
+div#competence .langue:checked ~ .competenceListe1 .android {
+  display: none;
+}
+div#competence .langue:checked ~ .competenceListe2 {
+  width: 322px;
+}
+div#competence .langue:checked ~ .competenceListe2 .sql {
+  display: none;
+}
+div#competence .langue:checked ~ .competenceListe2 .c {
+  display: none;
+}
+div#competence .langue:checked ~ .competenceListe2 .ps {
+  display: none;
+}
+div#competence .autres:checked ~ .competenceListe1 .html {
+  display: none;
+}
+div#competence .autres:checked ~ .competenceListe1 .css {
+  display: none;
+}
+div#competence .autres:checked ~ .competenceListe1 .js {
+  display: none;
+}
+div#competence .autres:checked ~ .competenceListe1 .php {
+  display: none;
+}
+div#competence .autres:checked ~ .competenceListe1 .android {
+  display: none;
+}
+div#competence .autres:checked ~ .competenceListe2 {
+  width: 322px;
+}
+div#competence .autres:checked ~ .competenceListe2 .sql {
+  display: none;
+}
+div#competence .autres:checked ~ .competenceListe2 .c {
+  display: none;
+}
+div#competence .autres:checked ~ .competenceListe2 .anglais {
+  display: none;
+}
+div#competence .autres:checked ~ .competenceListe2 .francais {
+  display: none;
+}
+div#competence .competenceListe1 {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+div#competence .competenceListe1 .logoLab {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 110px;
+  height: 110px;
+  background: grey;
+  color: white;
+  transition: 0.5s;
+  border-radius: 5%;
+  margin: 10px;
+}
+div#competence .competenceListe1 .logoLab:hover {
+  background-color: red;
+  border-radius: 40%;
+  transition: 1s;
+}
+div#competence .competenceListe1 .logoLab label {
+  padding-top: 8px;
+  opacity: 0.8;
+}
+div#competence .competenceListe2 {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+div#competence .competenceListe2 .logoLab {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 110px;
+  height: 110px;
+  background: grey;
+  color: white;
+  transition: 0.5s;
+  border-radius: 5%;
+  margin: 10px;
+}
+div#competence .competenceListe2 .logoLab:hover {
+  background-color: red;
+  border-radius: 40%;
+  transition: 1s;
+}
+div#competence .competenceListe2 .logoLab label {
+  padding-top: 8px;
+  opacity: 0.8;
+}
+div#hobbies .hobbielist {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+div#hobbies .hobbielist .hobbielab {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 150px;
+  background: grey;
+  color: white;
+  transition: 0.5s;
+  border-radius: 5%;
+  margin: 10px;
+}
+div#hobbies .hobbielist .hobbielab:hover {
+  background-color: green;
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3);
+}
+div#hobbies .hobbielist .hobbielab label {
+  padding-top: 8px;
+  opacity: 0.8;
+}
+h2#title {
+  text-align: center;
+  font-size: 30px;
+}

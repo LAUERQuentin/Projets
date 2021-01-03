@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>TD1 intDoc</title>
+        <link rel="stylesheet/less" type="text/css" href="css/styles.less" />
+        <link rel="stylesheet/less" type="text/css" href="css/cv.less" />
+        <script src="//cdn.jsdelivr.net/npm/less" ></script>
+    </head>
+    <body>
+        <h1>HTML5/CSS3</h1>
+        <nav>
+            <ul id ="barreTache">
+                <li><a href="#">Accueil</a></li>
+                <li><a href="librairie.html">PorteFeuille</a></li>
+                <li><a href="compteur.html">Compteur</a></li>
+                <li><a href="couleur.html">Couleur</a></li>
+                <li><a href="#">MonCv</a></li>
+            </ul>
+        </nav>
+        <input class="toggle" type="checkbox" name="toggle" id="toggle">
+        <label class="toggle" for="toggle"></label>
+        <br />
+        <main id="mainAll">
+            <h2 id="title">Curriculum Vitae</h2>
+            <div id=presentation >
+                <div id="profile">
+                    <img src="image/theRock.jpg"  alt="Photo profil" width="150px">
+                    <div id="pres">
+                        <section>
+                            <span>LAUER Quentin</span>
+                            <br /><br />
+                            <span>36 rue Quelque part</span>
+                            <br />
+                            <span>57000 Metz</span>
+                            <br /><br />
+                            <span>lauer.quentin57@gmail.com</span>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            
+            <br />
+            <main id ="mainCv">
+                <div id="formation" class = "main">
+                    <section>
+                        <h2>Etude Formation</h2>
+                        <h3>2020 à nos jours</h3>
+                        <span>Licence pro. Developpeur web et mobile pour le commerce électronique</span>
+                        <br />
+                        <h3>2016-2019</h3>
+                        <span>Université de lorraine - UFR MIM</span>
+                        <br />
+                        <h3>2013-2016</h3>
+                        <span>Lycée Louis de Cormontaigne Metz</span>
+                        <br />
+                    </section>
+                </div>
+                <br />
+                <div id="Experience Professionnelle" class = "main">
+                    <section>
+                        <h2>Experience Professionnelle</h2>
+                        <p>Employé libre service Auchan Semécourt depuis octobre 2017</p>
+                    </section>
+                </div>
+                <br />
+                <div id = competenceAll class = "main">
+                    <div id = competence>
+                        <h2>Compétences</h2>
+                        <input type="radio" id="tout" name="categ" class="tout" checked>
+                        <label class="tout" for="tout">Tout voir</label>
+
+                        <input type="radio" id=informatique name="categ" class="informatique">
+                        <label class="informatique" for="informatique">Informatique</label>
+
+                        <input type="radio" id=langue name="categ" class="langue">
+                        <label class="langue" for="langue">Langues</label>
+
+                        <input type="radio" id=autres name="categ" class="autres">
+                        <label class="autres" for="autres">Autres</label>
+                        
+                        <div class="competenceListe1">
+                            <div class="html">
+                                <div class="logoLab">
+                                    <img src="logo/html.png" alt="html" style="width:40px; height:40px;">
+                                    <label style="font-weight: bold;">HTML5</label>
+                                </div>
+                            </div>
+                            <div class="css">
+                                <div class="logoLab">
+                                    <img src="logo/css.png" alt="css" style="width:40px; height:40px;">
+                                    <label style="font-weight: bold;">CSS3</label>
+                                </div>
+                            </div>
+
+                            <div class="js">
+                                <div class="logoLab">
+                                    <img src="logo/js.png" alt="js" style="width:40px; height:40px;">
+                                    <label style="font-weight: bold;">JAVASCRIPT</label>
+                                </div>
+                            </div>
+
+                            <div class="php">
+                                <div class="logoLab">
+                                    <img src="logo/php.png" alt="php" style="width:40px; height:40px;">
+                                    <label style="font-weight: bold;">PHP</label>
+                                </div>
+                            </div>
+
+                            <div class="android">
+                                <div class="logoLab">
+                                    <img src="logo/android.png" alt="android" style="width:40px; height:40px;">
+                                    <label style="font-weight: bold;">ANDROID</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="competenceListe2">
+                            <div class="sql">
+                                <div class="logoLab">
+                                    <img src="logo/sql.png" alt="sql" style="width:40px; height:40px;">
+                                    <label style="font-weight: bold;">SQL</label>
+                                </div>
+                            </div>
+
+                            <div class="c">
+                                <div class="logoLab">
+                                    <img src="logo/C.png" alt="sql" style="width:40px; height:68px;">
+                                    <label style="font-weight: bold;">C</label>
+                                </div>
+                            </div>
+                            
+                            <div class="ps">
+                                <div class="logoLab">
+                                    <img src="logo/ps.png" alt="ps" style="width:40px; height:40px;">
+                                    <label style="font-weight: bold;">PHOTOSHOP</label>
+                                </div>
+                            </div>
+
+                            <div class="anglais">
+                                <div class="logoLab">
+                                    <img src="logo/anglais.png" alt="anglais" style="width:40px; height:40px;">
+                                    <label >ANGLAIS</label>
+                                </div>
+                            </div>
+
+                            <div class="francais">
+                                <div class="logoLab">
+                                    <img src="logo/france.png" alt="francais" style="width:40px; height:40px;">
+                                    <label >FRANCAIS</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <br />
+                <div id="hobbies" class="main">
+                    <section>
+                        <h3>Hobbies</h3>
+                        <div class="hobbielist">
+                            <div class = "hobbielab">
+                                <img src="image/guitare.png" alt="guitare" style="width:60px;">
+                                <label style="font-weight: bold;">Guitare</label>
+                            </div>
+                            <div class = "hobbielab">
+                                <img src="image/piano.png" alt="piano" style="width:60px;">
+                                <label style="font-weight: bold;">Piano</label>
+                            </div>
+                            <div class = "hobbielab">
+                                <img src="image/jvideo.png" alt="jvideo" style="width:60px;">
+                                <label style="font-weight: bold; text-align: center;">Jeux Video</label>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+        </main>
+        
+            
+    </body>
+</html>

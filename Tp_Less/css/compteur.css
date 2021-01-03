@@ -1,0 +1,69 @@
+input#toggle1,
+input#toggle2,
+input#toggle3,
+input#toggle4,
+input#toggle5,
+input#toggle6 {
+  max-height: 0;
+  max-width: 0;
+  opacity: 0;
+  user-select: none;
+}
+input#toggle1 + label,
+input#toggle2 + label,
+input#toggle3 + label,
+input#toggle4 + label,
+input#toggle5 + label,
+input#toggle6 + label {
+  display: inline-block;
+  box-shadow: inset 0 0 0px 1px #d5d5d5;
+  height: 50px;
+  width: 50px;
+  border-radius: 15px;
+  text-align: center;
+  user-select: none;
+  background: grey;
+}
+input#toggle1 + label:hover,
+input#toggle2 + label:hover,
+input#toggle3 + label:hover,
+input#toggle4 + label:hover,
+input#toggle5 + label:hover,
+input#toggle6 + label:hover {
+  background-color: yellowgreen;
+}
+input#toggle1:checked + label,
+input#toggle2:checked + label,
+input#toggle3:checked + label,
+input#toggle4:checked + label,
+input#toggle5:checked + label,
+input#toggle6:checked + label {
+  background: #016586;
+}
+#compteur {
+  counter-reset: result;
+}
+#compteur input#toggle1:checked {
+  counter-increment: result 64;
+}
+#compteur input#toggle2:checked {
+  counter-increment: result 16;
+}
+#compteur input#toggle3:checked {
+  counter-increment: result -32;
+}
+#compteur input#toggle4:checked {
+  counter-increment: result 128;
+}
+#compteur input#toggle5:checked {
+  counter-increment: result 4;
+}
+#compteur input#toggle6:checked {
+  counter-increment: result -8;
+}
+#compteur input#toggle1:checked + label + input#toggle2:checked + label + input#toggle3:not(:checked) + label + input#toggle4:not(:checked) + label + input#toggle5:not(:checked) + label + input#toggle6:checked + label ~ label#result:after {
+  content: counter(result) " Bien joué";
+}
+#compteur label#result:after {
+  content: counter(result);
+}

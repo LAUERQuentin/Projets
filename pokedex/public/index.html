@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet Pokedex</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <script src="https://unpkg.com/pokeapi-js-wrapper/dist/index.js"></script>
+    <script type="module" src="../js/main.js" async></script>
+</head>
+<body>
+    <div class="container-fluid main">
+        <div class="row header">
+            <div class="col-2">
+                <img id="logo" src="../img/logo_poke.png">
+            </div>
+            <div class="col-8">
+
+            </div>
+            <div id="team-name" class="col-2">
+                <h3>Team Tanuki</h3>
+            </div>
+        </div>
+        
+        <div class="row content">
+            <div class="col-3 select-menu">
+                <input type="search" id="searchBar" class="form-control" placeholder="Search...">
+                <div id="feedback"></div>
+                <label for="sort-by">Sort by : </label>
+                <select class="form-control" id="sort-by">
+                    <option value="id">ID</option>
+                    <option value="az">Name A - Z</option>
+                    <option value="za">Name Z - A</option>
+                </select>
+                <div class="overflow-auto pokemon-list">
+                    <ul id="PokemonList"></ul>
+                </div>
+            </div>
+            <div class="col-9 pokedex-entry overflow-auto">
+                <div class="container fiche">
+                    <div class="row">
+                        <div class="col-xl-3">
+                            <img id ="imgPok" src="https://via.placeholder.com/250x250" alt="">
+                        </div>
+                        <div class="col-xl-9">
+                            <div>
+                                <div class="float-right">
+                                    <button type="button" class="btn">
+                                        <svg width="2.2em" height="2.2em" viewBox="0 0 16 16" class="bi bi-heart-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <h1 id="titleName"></h1>
+                            </div>
+                            <ul class="list-group list-group-flush characteristics_list">
+                                <li class="list-group-item">Type : <span id = "type"></span></li>
+                                <li class="list-group-item">Abilities : <span id = "abilities" title = ""></span></li>
+                                <li class="list-group-item">Height : <span id = "height"></span></li>
+                                <li class="list-group-item">Weight : <span id = "weight"></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <h2>Base stats</h2>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <ul class="list-group list-group-flush basestats_list">
+                                <li class="list-group-item">HP : <span id = "hp"></span></li>
+                                <li class="list-group-item">ATK : <span id = "atk"></span></li>
+                                <li class="list-group-item">DEF : <span id = "def"></span></li>
+                                <li class="list-group-item">Sp. ATK : <span id = "spAtk"></span></li>
+                                <li class="list-group-item">Sp. DEF : <span id = "spDef"></span></li>
+                                <li class="list-group-item">Speed : <span id = "spd"></span></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-6">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <div class="progress">
+                                        <div id="progBarreHp" class="progress-bar bg-danger progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="200"></div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="progress">
+                                        <div id="progBarreAtk" class="progress-bar bg-danger progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="200"></div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="progress">
+                                        <div id="progBarreDef" class="progress-bar bg-danger progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="200"></div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="progress">
+                                        <div id="progBarreSpAtk" class="progress-bar bg-danger progress-bar-striped progress-bar-animated" role="progressbar"aria-valuenow="100" aria-valuemin="0" aria-valuemax="200"></div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="progress">
+                                        <div id="progBarreSpDef" class="progress-bar bg-danger progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="200"></div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="progress">
+                                        <div id="progBarreSpd" class="progress-bar bg-danger progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="150" aria-valuemin="0" aria-valuemax="200"></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                      </div>
+                    <h2>Move list</h2>
+                    <div class="row">
+                        <div class="col-lg-6">
+                        <ul class="list-group list-group-flush move_list" id = "moveList">
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
